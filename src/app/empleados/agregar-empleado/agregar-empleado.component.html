@@ -1,1 +1,20 @@
-<p>agregar-empleado works!</p>
+<div class="container my-4">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h3 class="text-center">Agregar Empleado</h3>
+      <hr>
+      <form (submit)="agregar()" class="form-group">
+        <div class="form-group mb-3">
+          <input type="text" name="nombre" class="form-control" placeholder="Nombre" [(ngModel)]="empleado.nombre" required>
+        </div>
+        <div class="form-group mb-3">
+          <input type="text" name="apellido" class="form-control" placeholder="Apellido" [(ngModel)]="empleado.apellido" required>
+        </div>
+        <div class="form-group mb-3">
+          <input type="text" name="puesto" class="form-control" placeholder="Puesto" [(ngModel)]="empleado.puesto" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Agregar</button>
+      </form>
+    </div>
+  </div>
+</div>

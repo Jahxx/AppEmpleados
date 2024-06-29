@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {EmpleadosService} from "../empleados.service";
+import {IEmpleado} from "../interfaces/iempleado";
 
 @Component({
   selector: 'app-listado-empleados',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class ListadoEmpleadosComponent {
 
+
+  constructor(private empleadosService: EmpleadosService) {
+  }
+
+  get empleados(): IEmpleado[] {
+    return this.empleadosService.empleados;
+  }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {EmpleadosService} from "../empleados.service";
 
 @Component({
   selector: 'app-pagina-inicio',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './pagina-inicio.component.css'
 })
 export class PaginaInicioComponent {
-
+  constructor(private empleadoService: EmpleadosService) {
+  }
 }

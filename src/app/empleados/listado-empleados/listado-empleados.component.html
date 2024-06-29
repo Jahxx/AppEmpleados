@@ -1,1 +1,14 @@
-<p>listado-empleados works!</p>
+<div class="container my-4">
+  <br>
+
+  <div class="row">
+    <div *ngFor="let empleado of empleados" class="col-md-4 col-sm-6">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ empleado.nombre }} {{empleado.apellido}}</h5>
+          <p class="card-text">{{ empleado.puesto }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
